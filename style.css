@@ -92,7 +92,7 @@ body {
 }
 
 
-/******************* Menubar *******************/
+/******************* Homepage *******************/
 
 .intro {
     width: 100%;
@@ -101,7 +101,7 @@ body {
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 0;
+    padding-top: 20px;
 }
 
 .intro img {
@@ -115,9 +115,99 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 20px;
-    background-color: #0066ff;
+    background: linear-gradient(45deg, #0047b3, #0066ff);
     font-size: 20px;
 }
+
+/******************* Beneficios *******************/
+
+.beneficios {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.beneficios h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.beneficios a {
+    text-decoration: none;
+    color: #000;
+    background-color: #0066ff;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4em;
+    color: #0066ff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-aderir {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-aderir:hover {
+    background-color: #0047b3;
+}
+
 
 /******************* Rodapé *******************/
 
