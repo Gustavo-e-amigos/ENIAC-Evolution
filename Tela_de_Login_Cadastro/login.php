@@ -3,16 +3,13 @@ session_start();
 require_once 'conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
-
     if (!isset($_POST['usuario-ra']) || !isset($_POST['senha'])) {
-        die("Campo RA ou Senha não enviados.");
+        echo "<script>alert('Campo RA ou Senha não enviados.'); window.location.href='login.html';</script>";
+        exit();
     }
 
     $ra = trim($_POST['usuario-ra']);
-    $senha = trim($_POST['senha']); // Adicionado trim aqui
+    $senha = trim($_POST['senha']); 
 
     $sql = "SELECT * FROM usuarios WHERE ra = ?";
     $stmt = $conexao->prepare($sql);
@@ -23,9 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($resultado->num_rows === 1) {
         $usuario = $resultado->fetch_assoc();
 
-        echo "Senha digitada: " . $senha . "<br>";
-        echo "Senha no banco: " . $usuario['senha'] . "<br>";
-
         if (isset($usuario['senha']) && $senha === $usuario['senha']) {
             $_SESSION['nome'] = $usuario['nome'];
             $_SESSION['ra'] = $usuario['ra'];
@@ -33,11 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: home.html");
             exit();
         } else {
-            echo "<strong>Senha incorreta!</strong>";
+            echo "<script>alert('Senha incorreta!'); window.location.href='login.html';</script>";
         }
     } else {
-        echo "<strong>RA não encontrado!</strong>";
+        echo "<script>alert('RA não encontrado!'); window.location.href='login.html';</script>";
     }
 }
-
 ?>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ENIAC / Benefícios</title>
+  <link rel="stylesheet" href="CSS/css.css" />
+  <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+<body>
+
+
+
+
+  <header class="cabecalho">
+    <div class="logo-e-nome">
+      <img id="logo" src=""alt="Logo Eniac"/>
+      <p>Programa de Fidelidade</p>
+    </div>
+
+
+
+
+    <nav class="Menu">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+
+
+
+
+      <div class="Cadastro">
+        <button>Cadastre-se</button>
+      </div>
+      <div class="Login">
+        <button>Login</button>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  
+  <section class="beneficios">
+    <div class="container">
+      <h2>Conheça Nossos Benefícios</h2>
+      <div class="cards">
+ 
+        <div class="card">
+          <img src="IMG/cafe-b.png" alt="">
+          <h3>Beneficio 1 </h3>
+          <p>.</p>
+          <button class="btn-aderir">Aderir</button>
+        </div>
+ 
+        <div class="card">
+          <img src="IMG/caixa-b.png" alt="">
+          <h3>Beneficio 2 </h3>
+          <p>.</p>
+          <button class="btn-aderir">Aderir</button>
+        </div>
+ 
+        <div class="card">
+          <img src="IMG/camisa-b.png" alt="">
+          <h3>Beneficio 3 </h3>
+          <p></p>
+          <button class="btn-aderir">Aderir</button>
+        </div>
+ 
+        <div class="card">
+          <img src="IMG/certificado-b.png" alt="">
+          <h3>Beneficio 4</h3>
+          <p></p>
+          <button class="btn-aderir">Aderir</button>
+        </div>
+ 
+        <div class="card">
+          <img src="IMG/curso-b.png" alt="">
+          <h3>Beneficio 5</h3>
+          <p>.</p>
+          <button class="btn-aderir">Aderir</button>
+        </div>
+ 
+        <div class="card">
+          <img src="IMG/garrafa-b.png" alt="">
+          <h3>Beneficio 6</h3>
+          <p>.</p>
+          <button class="btn-aderir">Aderir</button>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+   <footer class="rodape">
+    <div class="container">
+      <img src="logo.png" alt="Logo Eniac" />
+
+
+
+
+      <div class="footer-sections">
+        <div class="footer-box">
+          <h3>Links Rápidos</h3>
+          <ol>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ol>
+        </div>
+
+
+
+
+        <div class="footer-box">
+          <h3>Contato</h3>
+          <ol>
+            <li><a href="contato@empresa.com">contato@empresa.com</a></li>
+            <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+            <li><a href="#">Endereço: Rua Exemplo, 123</a></li>
+            <li><a href="#">Suporte via WhatsApp</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+   /* Efeito botão de clique */
+    const botoesAderir = document.querySelectorAll('.btn-aderir');
+    botoesAderir.forEach((botao) => {
+      botao.addEventListener('click', () => {
+        const nomeBeneficio = botao.parentElement.querySelector('h3').textContent;
+        alert(`Você aderiu ao benefício: "${nomeBeneficio}"`);
+      });
+    });
+   
+  </script>
+ 
+</body>
+</html>
+
+
