@@ -112,6 +112,7 @@ body {
     width: 30%;
     height: 10%;
     background-color: var(--corTer);
+    color: #fff;
     text-align: center;
     padding: 20px;
     border-radius: 20px;
@@ -125,6 +126,7 @@ body {
     padding: 40px 20px;
     background-color: #fff;
     text-align: center;
+    position: relative;
 }
 
 .beneficios h2 {
@@ -135,9 +137,14 @@ body {
 
 .beneficios a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     background-color: #0066ff;
     padding: 20px;
+    border-radius: 10px;
+}
+.beneficios a:hover{
+    background-color: #0047b3;
+    transition: background-color 0.3s ease;
 }
 
 .cards {
