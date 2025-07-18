@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+ 
+  .pointzone {
+    color:rgb(248, 246, 246);
+    padding: 20px 0;
+    text-align: center;
+    background: linear-gradient(90deg, #0066ff, #0047b3);;
+  }
+ 
+  .container-zone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+ 
+  .pointzone h1 {
+    text-align: center;
+    font-size: 2rem;
+    flex: 1;
+  }
+ 
+  .menu-bar {
+    position: relative;
+  }
+ 
+  .checkbox {
+    display: none;
+  }
+ 
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: center;
+    z-index: 11;
+  }
+ 
+  .line {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+ 
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    z-index: 10;
+  }
+ 
+  .menu-items li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+ 
+  .menu-items li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+  }
+ 
+  .menu-items li a:hover {
+    text-decoration: underline;
+  }
+ 
+  .checkbox:checked ~ .menu-icon .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .checkbox:checked ~ .menu-icon .line2 {
+    opacity: 0;
+  }
+  .checkbox:checked ~ .menu-icon .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+ 
+  .checkbox:checked ~ .menu-items {
+    display: flex;
+  }
+ 
+  .flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #e9ecef;
+  }
+ 
+  .flex-box img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: #0066ff solid;
+  }
+ 
+  .flex-box button {
+      background-color:#0066ff ;
+      color: white;
+      padding: 10px;
+      border: none;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+
+
+  .flex-box button:hover {
+      background-color: #0047b3;
+  }
+ 
+  .container-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px 15px;
+  }
+ 
+  .card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 15px;
+  }
+ 
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  }
+ 
+  .card h2 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+ 
+  .card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0066ff;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+ 
+  .card button:hover {
+    background-color: #0047b3;
+  }
+ 
+  footer {
+    background: linear-gradient(90deg, #0066ff, #0047b3);
+    color: #fff;
+    padding: 30px 20px;
+    font-size: 16px;
+  }
+ 
+  footer img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+ 
+  .footer-sections {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+ 
+  .footer-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+  }
+ 
+  .footer-box ul,
+  .footer-box ol {
+    padding: 0;
+    list-style: none;
+  }
+ 
+  .footer-box li {
+    margin-bottom: 8px;
+  }
+ 
+  .rodape a {
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  .rodape a:hover {
+    text-decoration: underline;
+  }
+ 
+  @media (min-width: 768px) {
+    .menu-icon {
+      display: none;
+    }
+ 
+    .menu-items {
+      display: flex !important;
+      position: static;
+      flex-direction: row;
+      background: none;
+      padding: 0;
+      gap: 20px;
+    }
+ 
+    .menu-items li {
+      margin-bottom: 0;
+    }
+  }
+ 
