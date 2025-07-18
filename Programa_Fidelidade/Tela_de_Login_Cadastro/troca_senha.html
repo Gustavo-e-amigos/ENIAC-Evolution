@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css" />
+  <title>Trocar Senha</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box form-box">
+      <div class="logo-container">
+        <img src="IMG/image 1.png" alt="Logo" class="logo" />
+      </div>
+
+      <header>Trocar Senha</header>
+
+      <form action="trocar_senha.php" method="post">
+        <div class="field input">
+          <label for="ra">RA:</label>
+          <input type="text" name="ra" id="ra" pattern="\d{9}" maxlength="9" required>
+        </div>
+
+        <div class="field input">
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div class="field input">
+          <label for="nova_senha">Nova senha:</label>
+          <input type="password" name="nova_senha" id="nova_senha" required>
+        </div>
+
+        <div class="field input">
+          <label for="confirmar_senha">Confirmar nova senha:</label>
+          <input type="password" name="confirmar_senha" id="confirmar_senha" required>
+        </div>
+
+        <div class="field">
+          <input type="submit" class="botao" value="Atualizar senha">
+        </div>
+      </form>
+
+      <div class="links">
+        <p><a href="login.html">Voltar ao login</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
