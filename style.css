@@ -31,6 +31,10 @@ body {
     width: 150px;
 }
 
+.topnav .icon {
+    display: none;
+  }
+
 
 .Menu {
     display: flex;
@@ -91,6 +95,14 @@ body {
     color: #000;
 }
 
+@media (max-width: 767px){
+    .Menu{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
 
 /******************* Homepage *******************/
 
@@ -120,6 +132,18 @@ body {
     font-size: 20px;
 }
 
+@media (max-width: 910px){
+    .intro{
+        flex-direction: column-reverse;
+        padding-top: 15px;
+    }
+
+    .intro p{
+        width: 100%;
+        height: auto;
+    }
+}
+
 /******************* Beneficios *******************/
 
 .beneficios {
@@ -142,7 +166,8 @@ body {
     padding: 20px;
     border-radius: 10px;
 }
-.beneficios a:hover{
+
+.beneficios a:hover {
     background-color: #0047b3;
     transition: background-color 0.3s ease;
 }
@@ -309,5 +334,11 @@ footer img {
         flex-direction: column;
         align-items: center;
         gap: 30px;
+    }
+}
+
+@media (max-width: 980px) {
+    footer img {
+        display: none;
     }
 }
