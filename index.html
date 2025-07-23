@@ -6,22 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ENIAC Fidelidade</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-
-
-
-
+    <!--Menubar desktop-->
     <header class="cabecalho">
         <div class="logo-e-nome">
             <img id="logo" src="./IMG/image 1.png" alt="Logo Eniac" />
             <p>- Programa de fidelidade </p>
         </div>
-
-
-
 
         <nav class="Menu">
             <ul>
@@ -43,12 +38,25 @@
         </nav>
     </header>
 
+    <!--Menubar mobile-->
+
+    <div class="topnav" id="myTopnav">
+        <a href="#" class="active">Programa de Fidelidade</a>
+        <a href="#">Serviços</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a style="background-color: #264274;" href="#">Login</a>
+        <a style="background-color: #F06E6E;" href="#">Cadastro</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
     <section class="intro">
 
-        <p>🎓 O Programa de Fidelidade Acadêmica foi criado para transformar o seu empenho em reconhecimento real.
-            Aqui, a sua participação ativa na vida universitária como em cursos, palestras, workshops e outras
-            atividades complementares, se transforma em pontos que podem ser trocados por prêmios e vantagens
-            exclusivas.</p>
+        <p>🎓 O Programa de Fidelidade Acadêmica foi criado para transformar o seu empenho em reconhecimento real. Aqui, a sua participação ativa na vida universitária como em cursos, palestras, workshops e outras atividades complementares, se transforma
+            em pontos que podem ser trocados por prêmios e vantagens exclusivas.
+        </p>
 
         <img src="./IMG/pessoas_felizes.png" alt="Pessoas Felizes">
 
@@ -125,7 +133,6 @@
         </div>
     </footer>
     <script>
-
         const botoesAderir = document.querySelectorAll('.btn-aderir');
 
 
@@ -136,6 +143,14 @@
             });
         });
 
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
     </script>
 
 </body>
