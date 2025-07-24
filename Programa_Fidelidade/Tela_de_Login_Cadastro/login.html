@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Login</title>
+</head>
+<body>
+    <!-- Login (Container) -->
+     <div class="container">
+        <div class="box form-box">
+
+            <div class="logo-container">
+                <img src="IMG/image 1.png" alt="Logo do Programa" class="logo"/>
+            </div>
+
+            <header> Login </header>
+            <form action="login.php" method="post">
+                <div class="field input">
+                    <label for="usuario-ra">RA:</label>
+                    <input type="text" name="usuario-ra" id="usuario-ra" pattern="\d{9}" maxlength="9" required title="Digite seu RA escola">
+                </div>
+
+                <div class="field input">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" required>
+                </div>
+
+                <div class="field input">
+                    <input type="submit" class="botao" name="submit" value="Login" required>
+                </div>
+
+            <div class="links">
+              <p> Não possuir conta? <a href="cadastro.html">Cadastro</a> </p>
+              <p> <a href="troca_senha.html"> Esqueceu a Senha? </a> </p>
+            </div>
+
+            </form>
+
+        </div>
+     </div>
+     <!-- Login (Container) -->
+</body>
+</html>
